@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, ManyToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { ProductoEntity } from '../producto/producto.entity';
 
 @Entity()
 export class TiendaEntity {
@@ -10,4 +11,6 @@ export class TiendaEntity {
   ciudad: string;
   @Column()
   direccion: string;
+  @ManyToMany(() => ProductoEntity, producto => producto.tiendas)
+  productos: ProductoEntity[];
 }
