@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { IsNotEmpty, IsString } from "class-validator";
+import { IsNotEmpty, IsString, Matches } from "class-validator";
 
 export class TiendaDto {
    @IsString()
@@ -8,6 +8,7 @@ export class TiendaDto {
 
    @IsString()
    @IsNotEmpty()
+   @Matches(/^[A-Z]{3}$/)
    readonly ciudad: string;
 
    @IsString()

@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import {IsNotEmpty, IsString} from 'class-validator';
+import {IsNotEmpty, IsString, IsIn} from 'class-validator';
 export class ProductoDto {
 
  @IsString()
@@ -8,6 +8,7 @@ export class ProductoDto {
  
  @IsString()
  @IsNotEmpty()
+ @IsIn(['Perecedero', 'No perecedero'])
  readonly tipo: string;
  
  @IsString()
