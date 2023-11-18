@@ -36,7 +36,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"nombre\": \"El producto 1\",\n    \"tipo\": \"Tipo1\",\n    \"precio\": \"2000\"\n }\n",
+					"raw": "{\n    \"nombre\": \"El producto 1\",\n    \"tipo\": \"Perecedero\",\n    \"precio\": \"2000\"\n }\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -93,7 +93,7 @@
 					"_postman_previewlanguage": "json",
 					"header": [],
 					"cookie": [],
-					"body": "{\n   \"id\": \"48a9ab90-1276-11ed-861d-0242ac120002\",\n   \"nombre\": \"El producto 01\",\n   \"tipo\": \"Tipo producto 1\",\n   \"precio\": \"2000\"\n}\n"
+					"body": "{\n   \"id\": \"48a9ab90-1276-11ed-861d-0242ac120002\",\n   \"nombre\": \"El producto 01\",\n   \"tipo\": \"Perecedero\",\n   \"precio\": \"2000\"\n}\n"
 				}
 			]
 		},
@@ -155,7 +155,7 @@
 					"_postman_previewlanguage": "json",
 					"header": [],
 					"cookie": [],
-					"body": "[\n    {\n        \"id\": \"14f05d0e-1275-11ed-861d-0242ac120002\",\n        \"nombre\": \"Producto 01\",\n        \"tipo\": \"Tipo producto 01\",\n        \"precio\": \"2000\",\n        \"tiendas\": [\n            {\n                \"id\": \"14f05d0e-1275-11ed-861d-0242ac120032\",\n                \"nombre\": \"Tienda 01\",\n                \"ciudad\": \"Ciudad 01\",\n                \"direccion\": \"Calle 123\"\n            },\n            {\n                \"id\": \"14f05d0e-1275-11ed-861d-0242ac120032\",\n                \"nombre\": \"Tienda 02\",\n                \"ciudad\": \"Ciudad 01\",\n                \"direccion\": \"Calle 234\"\n            },\n            {\n                \"id\": \"14f05d0e-1275-11ed-861d-0242ac120032\",\n                \"nombre\": \"Tienda 03\",\n                \"ciudad\": \"Ciudad 02\",\n                \"direccion\": \"Calle 456\"\n            }\n        ]\n    }\n]"
+					"body": "[\n    {\n        \"id\": \"14f05d0e-1275-11ed-861d-0242ac120002\",\n        \"nombre\": \"Producto 01\",\n        \"tipo\": \"No perecedero\",\n        \"precio\": \"2000\",\n        \"tiendas\": [\n            {\n                \"id\": \"14f05d0e-1275-11ed-861d-0242ac120032\",\n                \"nombre\": \"Tienda 01\",\n                \"ciudad\": \"Ciudad 01\",\n                \"direccion\": \"Calle 123\"\n            },\n            {\n                \"id\": \"14f05d0e-1275-11ed-861d-0242ac120032\",\n                \"nombre\": \"Tienda 02\",\n                \"ciudad\": \"Ciudad 01\",\n                \"direccion\": \"Calle 234\"\n            },\n            {\n                \"id\": \"14f05d0e-1275-11ed-861d-0242ac120032\",\n                \"nombre\": \"Tienda 03\",\n                \"ciudad\": \"Ciudad 02\",\n                \"direccion\": \"Calle 456\"\n            }\n        ]\n    }\n]"
 				}
 			]
 		},
@@ -213,7 +213,7 @@
 					"_postman_previewlanguage": "json",
 					"header": [],
 					"cookie": [],
-					"body": "{\n        \"id\": \"14f05d0e-1275-11ed-861d-0242ac120002\",\n        \"nombre\": \"Producto 01\",\n        \"tipo\": \"Tipo producto 01\",\n        \"precio\": \"2000\",\n        \"tiendas\": [\n            {\n                \"id\": \"14f05d0e-1275-11ed-861d-0242ac120032\",\n                \"nombre\": \"Tienda 01\",\n                \"ciudad\": \"Ciudad 01\",\n                \"direccion\": \"Calle 123\"\n            },\n            {\n                \"id\": \"14f05d0e-1275-11ed-861d-0242ac120032\",\n                \"nombre\": \"Tienda 02\",\n                \"ciudad\": \"Ciudad 01\",\n                \"direccion\": \"Calle 234\"\n            },\n            {\n                \"id\": \"14f05d0e-1275-11ed-861d-0242ac120032\",\n                \"nombre\": \"Tienda 03\",\n                \"ciudad\": \"Ciudad 02\",\n                \"direccion\": \"Calle 456\"\n            }\n        ]\n}"
+					"body": "{\n        \"id\": \"14f05d0e-1275-11ed-861d-0242ac120002\",\n        \"nombre\": \"Producto 01\",\n        \"tipo\": \"No perecedero\",\n        \"precio\": \"2000\",\n        \"tiendas\": [\n            {\n                \"id\": \"14f05d0e-1275-11ed-861d-0242ac120032\",\n                \"nombre\": \"Tienda 01\",\n                \"ciudad\": \"Ciudad 01\",\n                \"direccion\": \"Calle 123\"\n            },\n            {\n                \"id\": \"14f05d0e-1275-11ed-861d-0242ac120032\",\n                \"nombre\": \"Tienda 02\",\n                \"ciudad\": \"Ciudad 01\",\n                \"direccion\": \"Calle 234\"\n            },\n            {\n                \"id\": \"14f05d0e-1275-11ed-861d-0242ac120032\",\n                \"nombre\": \"Tienda 03\",\n                \"ciudad\": \"Ciudad 02\",\n                \"direccion\": \"Calle 456\"\n            }\n        ]\n}"
 				}
 			]
 		},
@@ -301,7 +301,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{    \n    \"nombre\": \"El nuevo nombre del producto 1\",\n    \"tipo\": \"El nuevo Tipo del producto 1\",\n    \"precio\": \"3050\"\n}",
+					"raw": "{    \n    \"nombre\": \"El nuevo nombre del producto 1\",\n    \"tipo\": \"No perecedero\",\n    \"precio\": \"3050\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -352,7 +352,7 @@
 					"_postman_previewlanguage": "json",
 					"header": [],
 					"cookie": [],
-					"body": "{\n   \"id\": \"48a9ab90-1276-11ed-861d-0242ac120002\",\n   \"nombre\": \"El producto 01\",\n   \"tipo\": \"Tipo producto 1\",\n   \"precio\": \"2000\"\n}"
+					"body": "{\n   \"id\": \"48a9ab90-1276-11ed-861d-0242ac120002\",\n   \"nombre\": \"El producto 01\",\n   \"tipo\": \"Perecedero\",\n   \"precio\": \"2000\"\n}"
 				}
 			]
 		},
@@ -381,7 +381,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{    \n    \"nombre\": \"El nuevo nombre del producto 1\",\n    \"tipo\": \"El nuevo Tipo del producto 1\",\n    \"precio\": \"3050\"\n}",
+					"raw": "{    \n    \"nombre\": \"El nuevo nombre del producto 1\",\n    \"tipo\": \"Perecedero\",\n    \"precio\": \"3050\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -407,7 +407,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Smithsonian national producto of natural history\",\n    \"description\": \"The world's most popular natural history producto is dedicated to understanding the natural world and our place in it. Delve into the fascinating story of our planet, from its fiery beginnings through billions of years of transformation, and explore life on Earth through exhibitions and activities, collection objects and research that happens in the lab and in the field. The producto is larger than 18 football fields and is home to the largest natural history collection in the world.\",\n    \"address\": \"10th St. & Constitution Ave. NW, Washington, DC (new address)\",\n    \"city\": \"Washington DC\",\n    \"image\": \"https://www.si.edu/sites/default/files/newsdesk/fact_sheets/nhb2015-02891.jpg\"\n}",
+							"raw": "{    \n    \"nombre\": \"El nuevo nombre del producto 1\",\n    \"tipo\": \"Perecedero\",\n    \"precio\": \"3050\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
