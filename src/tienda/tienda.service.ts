@@ -23,7 +23,7 @@ export class TiendaService {
       where: {
         id,
       },
-      relations: ['tiendas'],
+      relations: ['productos'],
     });
     if (!tienda)
       throw new BusinessLogicException(
