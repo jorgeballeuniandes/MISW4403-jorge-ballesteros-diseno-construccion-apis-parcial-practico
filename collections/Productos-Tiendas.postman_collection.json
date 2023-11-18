@@ -1,0 +1,2092 @@
+{
+	"info": {
+		"_postman_id": "d72f8150-7f11-4769-aab4-046c18416d79",
+		"name": "Productos-Tiendas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30320915",
+		"_collection_link": "https://pf2-g12.postman.co/workspace/pf2~e014f0b5-ee3d-4e14-a3f9-7498abb1de95/collection/30320915-d72f8150-7f11-4769-aab4-046c18416d79?action=share&source=collection_link&creator=30320915"
+	},
+	"item": [
+		{
+			"name": "Add a producto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = pm.response.json()",
+							"pm.globals.set(\"producto_id\", data.id);",
+							"",
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"El producto 1\",\n    \"tipo\": \"Perecedero\",\n    \"precio\": \"2000\"\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/productos",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos"
+					]
+				},
+				"description": "This request creates a new producto. The API returns the created resource with the assigned ID."
+			},
+			"response": [
+				{
+					"name": "Add a producto",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Smithsonian national producto of natural history\",\n    \"description\": \"The world's most popular natural history producto is dedicated to understanding the natural world and our place in it. Delve into the fascinating story of our planet, from its fiery beginnings through billions of years of transformation, and explore life on Earth through exhibitions and activities, collection objects and research that happens in the lab and in the field. The producto is larger than 18 football fields and is home to the largest natural history collection in the world.\",\n    \"address\": \"10th St. & Constitution Ave. NW, Washington, DC\",\n    \"city\": \"Washington DC\",\n    \"image\": \"https://www.si.edu/sites/default/files/newsdesk/fact_sheets/nhb2015-02891.jpg\"\n }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/productos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"productos"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n   \"id\": \"48a9ab90-1276-11ed-861d-0242ac120002\",\n   \"nombre\": \"El producto 01\",\n   \"tipo\": \"Perecedero\",\n   \"precio\": \"2000\"\n}\n\n"
+				}
+			]
+		},
+		{
+			"name": "Add an tienda 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = pm.response.json()",
+							"pm.globals.set(\"tienda_id_1\", data.id);",
+							"",
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"La tienda 01\",\n    \"ciudad\": \"BTA\",\n    \"direccion\": \"Calle 123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/tiendas",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"tiendas"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add an tienda",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"La Femme qui pleure\",\n    \"description\": \"The Weeping Woman, I is an elaboration of one of the central figures in Picasso’s famous mural-size painting Guernica, executed some months earlier.\",\n    \"year\": 1837,\n    \"type\": \"Painting\",\n    \"mainImage\": \"https://assets.catawiki.nl/assets/2019/3/7/2/f/5/2f5c8a17-0b06-4f26-b4a7-4fa51a430ce1.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tiendas",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tiendas"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "375"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"177-KviNwRfAdyNZmiHt915SK9j7Ask\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 18:55:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"nombre\": \"Tienda 01\",\n    \"ciudad\": \"BTA\",\n    \"direccion\": \"Calle 123\",\n    \"id\": \"37d742be-e0e0-4024-b840-64cb41623aed\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add an tienda 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = pm.response.json()",
+							"pm.globals.set(\"tienda_id_2\", data.id);",
+							"",
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"La tienda 02\",\n    \"ciudad\": \"BTA\",\n    \"direccion\": \"Calle 123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/tiendas",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"tiendas"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add an tienda",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"La Femme qui pleure\",\n    \"description\": \"The Weeping Woman, I is an elaboration of one of the central figures in Picasso’s famous mural-size painting Guernica, executed some months earlier.\",\n    \"year\": 1837,\n    \"type\": \"Painting\",\n    \"mainImage\": \"https://assets.catawiki.nl/assets/2019/3/7/2/f/5/2f5c8a17-0b06-4f26-b4a7-4fa51a430ce1.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tiendas",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tiendas"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "375"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"177-KviNwRfAdyNZmiHt915SK9j7Ask\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 18:55:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"nombre\": \"Tienda 01\",\n    \"ciudad\": \"BTA\",\n    \"direccion\": \"Calle 123\",\n    \"id\": \"37d742be-e0e0-4024-b840-64cb41623aed\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add an tienda to a producto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/{{tienda_id_1}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"{{producto_id}}",
+						"tiendas",
+						"{{tienda_id_1}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add an tienda",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"La Femme qui pleure\",\n    \"description\": \"The Weeping Woman, I is an elaboration of one of the central figures in Picasso’s famous mural-size painting Guernica, executed some months earlier.\",\n    \"year\": 1837,\n    \"type\": \"Painting\",\n    \"mainImage\": \"https://assets.catawiki.nl/assets/2019/3/7/2/f/5/2f5c8a17-0b06-4f26-b4a7-4fa51a430ce1.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/tiendas",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tiendas"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "375"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"177-KviNwRfAdyNZmiHt915SK9j7Ask\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 18:55:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"06527cc7-e6c6-4698-9f20-c517dadaac21\",\n    \"nombre\": \"El producto 1\",\n    \"precio\": \"2000\",\n    \"tipo\": \"Perecedero\",\n    \"tiendas\": [\n        {\n            \"id\": \"71d2fcbd-d48c-4a4c-9baa-0c0338d8e22c\",\n            \"nombre\": \"La tienda 01\",\n            \"ciudad\": \"BTA\",\n            \"direccion\": \"Calle 123\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Add an invalid tienda to a producto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"pm.test(\"Get expected error message\", function () {",
+							"    var data = pm.response.json();",
+							"    pm.expect(data.message).to.eql(\"No se encuentra ninguna tienda con ese id\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/00000000-0000-0000-0000-000000000000",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"{{producto_id}}",
+						"tiendas",
+						"00000000-0000-0000-0000-000000000000"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add an invalid tienda to a producto",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/00000000-0000-0000-0000-000000000000",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"productos",
+								"{{producto_id}}",
+								"tiendas",
+								"00000000-0000-0000-0000-000000000000"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "74"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4a-HdSXQ9DOFik77lA6BTILifOYwSg\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:10:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"No se encuentra ninguna tienda con ese id\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add an tienda to an invalid producto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"pm.test(\"Get expected error message\", function () {",
+							"    var data = pm.response.json();",
+							"    pm.expect(data.message).to.eql(\"No se encuentra ningún producto con ese id\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_1}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"00000000-0000-0000-0000-000000000000",
+						"tiendas",
+						"{{tienda_id_1}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add an tienda to an invalid producto",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_1}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"productos",
+								"00000000-0000-0000-0000-000000000000",
+								"tiendas",
+								"{{tienda_id_1}}"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "73"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"49-v/cpCsS/IuHJb9v22y7e8zPAYzs\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:12:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"No se encuentra ningún producto con ese id\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get an tienda of a producto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/{{tienda_id_1}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"{{producto_id}}",
+						"tiendas",
+						"{{tienda_id_1}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get an tienda of a producto",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/{{tienda_id}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"productos",
+								"{{producto_id}}",
+								"tiendas",
+								"{{tienda_id}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "375"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"177-ikNQ+rTE1CHOKyECsxXWUY0AeNY\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 19:41:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"71d2fcbd-d48c-4a4c-9baa-0c0338d8e22c\",\n        \"nombre\": \"La tienda 01\",\n        \"ciudad\": \"BTA\",\n        \"direccion\": \"Calle 123\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get an invalid tienda of a producto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"pm.test(\"Get expected error message\", function () {",
+							"    var data = pm.response.json();",
+							"    pm.expect(data.message).to.eql(\"No se encuentra ninguna tienda con ese id\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/00000000-0000-0000-0000-000000000000",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"{{producto_id}}",
+						"tiendas",
+						"00000000-0000-0000-0000-000000000000"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get an invalid tienda of a producto",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/00000000-0000-0000-0000-000000000000",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"productos",
+								"{{producto_id}}",
+								"tiendas",
+								"00000000-0000-0000-0000-000000000000"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "74"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4a-HdSXQ9DOFik77lA6BTILifOYwSg\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:17:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"No se encuentra ninguna tienda con ese id\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get an tienda of an invalid producto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"pm.test(\"Get expected error message\", function () {",
+							"    var data = pm.response.json();",
+							"    pm.expect(data.message).to.eql(\"No se encuentra ningún producto con ese id\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_1}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"00000000-0000-0000-0000-000000000000",
+						"tiendas",
+						"{{tienda_id_1}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get an tienda of an invalid producto",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_1}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"productos",
+								"00000000-0000-0000-0000-000000000000",
+								"tiendas",
+								"{{tienda_id_1}}"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "73"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"49-v/cpCsS/IuHJb9v22y7e8zPAYzs\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:17:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"No se encuentra ningún producto con ese id\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get an tienda non-associated to a producto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 412\", function () {",
+							"    pm.response.to.have.status(412);",
+							"});",
+							"",
+							"pm.test(\"Get expected error message\", function () {",
+							"    var data = pm.response.json();",
+							"    pm.expect(data.message).to.eql(\"La tienda con el id indicado no está asociada al producto con el id indicado\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/{{tienda_id_2}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"{{producto_id}}",
+						"tiendas",
+						"{{tienda_id_2}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get an tienda of an invalid producto",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_1}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"productos",
+								"00000000-0000-0000-0000-000000000000",
+								"tiendas",
+								"{{tienda_id_1}}"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "73"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"49-v/cpCsS/IuHJb9v22y7e8zPAYzs\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:17:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"La tienda con el id indicado no está asociada al producto con el id indicado\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get all tienda of a producto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"{{producto_id}}",
+						"tiendas",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all tienda of a producto",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"productos",
+								"{{producto_id}}",
+								"tiendas",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "377"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"179-6S7ZAxEW3K6BN+FOKdKf3W/TOeg\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:21:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"71d2fcbd-d48c-4a4c-9baa-0c0338d8e22c\",\n        \"nombre\": \"La tienda 01\",\n        \"ciudad\": \"BTA\",\n        \"direccion\": \"Calle 123\"\n    },\n    {\n        \"id\": \"1f738e1f-f2c8-4b73-b5a8-9b87773818f3\",\n        \"nombre\": \"La tienda 01\",\n        \"ciudad\": \"BTA\",\n        \"direccion\": \"Calle 123\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get all tienda of an invalid producto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"pm.test(\"Get expected error message\", function () {",
+							"    var data = pm.response.json();",
+							"    pm.expect(data.message).to.eql(\"No se encuentra ningún producto con ese id\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"00000000-0000-0000-0000-000000000000",
+						"tiendas",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all tienda of an invalid producto",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"productos",
+								"00000000-0000-0000-0000-000000000000",
+								"tiendas",
+								""
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "73"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"49-v/cpCsS/IuHJb9v22y7e8zPAYzs\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:24:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"No se encuentra ningún producto con ese id\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update tiendas of a producto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"id\": \"{{tienda_id_2}}\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"{{producto_id}}",
+						"tiendas"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update tiendas of a producto",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"id\": \"{{tienda_id_2}}\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"productos",
+								"{{producto_id}}",
+								"tiendas"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1149"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"47d-lloYeq9lZuh7ys1VbmtoB9Zh6o4\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 19:56:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"06527cc7-e6c6-4698-9f20-c517dadaac21\",\n    \"nombre\": \"El producto 1\",\n    \"precio\": \"2000\",\n    \"tipo\": \"Perecedero\",\n    \"tiendas\": [\n        {\n            \"id\": \"ab6c1c17-a502-4f33-b13f-ee9c935d0c0e\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Update invalid tiendas of a producto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"pm.test(\"Get expected error message\", function () {",
+							"    var data = pm.response.json();",
+							"    pm.expect(data.message).to.eql(\"No se encuentra ninguna tienda con ese id\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"id\": \"00000000-0000-0000-0000-000000000000\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"{{producto_id}}",
+						"tiendas"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update tiendas of a producto",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"id\": \"{{tienda_id_2}}\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"productos",
+								"{{producto_id}}",
+								"tiendas"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1149"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"47d-lloYeq9lZuh7ys1VbmtoB9Zh6o4\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 19:56:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"No se encuentra ninguna tienda con ese id\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update tiendas of an invalid producto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"pm.test(\"Get expected error message\", function () {",
+							"    var data = pm.response.json();",
+							"    pm.expect(data.message).to.eql(\"No se encuentra ningún producto con ese id\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"id\": \"{{tienda_id_2}}\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"00000000-0000-0000-0000-000000000000",
+						"tiendas"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update tiendas of a producto",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"id\": \"{{tienda_id_2}}\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"productos",
+								"{{producto_id}}",
+								"tiendas"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1149"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"47d-lloYeq9lZuh7ys1VbmtoB9Zh6o4\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 19:56:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"No se encuentra ningún producto con ese id\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete an tienda of a producto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/{{tienda_id_2}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"{{producto_id}}",
+						"tiendas",
+						"{{tienda_id_2}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete an tienda of a producto",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/{{tienda_id_2}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"productos",
+								"{{producto_id}}",
+								"tiendas",
+								"{{tienda_id_2}}"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:50:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Delete an tienda of an invalid producto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"pm.test(\"Get expected error message\", function () {",
+							"    var data = pm.response.json();",
+							"    pm.expect(data.message).to.eql(\"No se encuentra ningún producto con ese id\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_2}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"00000000-0000-0000-0000-000000000000",
+						"tiendas",
+						"{{tienda_id_2}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete an tienda of an invalid producto",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_2}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"productos",
+								"00000000-0000-0000-0000-000000000000",
+								"tiendas",
+								"{{tienda_id_2}}"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "73"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"49-v/cpCsS/IuHJb9v22y7e8zPAYzs\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:50:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"No se encuentra ningún producto con ese id\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete an invalid tienda of a producto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"pm.test(\"Get expected error message\", function () {",
+							"    var data = pm.response.json();",
+							"    pm.expect(data.message).to.eql(\"No se encuentra ninguna tienda con ese id\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/00000000-0000-0000-0000-000000000000",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"{{producto_id}}",
+						"tiendas",
+						"00000000-0000-0000-0000-000000000000"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete an tienda of an invalid producto",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_2}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"productos",
+								"00000000-0000-0000-0000-000000000000",
+								"tiendas",
+								"{{tienda_id_2}}"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "73"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"49-v/cpCsS/IuHJb9v22y7e8zPAYzs\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:50:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"No se encuentra ninguna tienda con ese id\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete an tienda non-associated to a producto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 412\", function () {",
+							"    pm.response.to.have.status(412);",
+							"});",
+							"",
+							"pm.test(\"Get expected error message\", function () {",
+							"    var data = pm.response.json();",
+							"    pm.expect(data.message).to.eql(\"La tienda con el id indicado no está asociada al producto con el id indicado\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/{{tienda_id_1}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"{{producto_id}}",
+						"tiendas",
+						"{{tienda_id_1}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete an tienda non-associated to a producto",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_2}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"productos",
+								"00000000-0000-0000-0000-000000000000",
+								"tiendas",
+								"{{tienda_id_2}}"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "73"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"49-v/cpCsS/IuHJb9v22y7e8zPAYzs\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:50:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"La tienda con el id indicado no está asociada al producto con el id indicado\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete an tienda 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/tiendas/{{tienda_id_2}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"tiendas",
+						"{{tienda_id_2}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete an tienda 2",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_2}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"productos",
+								"00000000-0000-0000-0000-000000000000",
+								"tiendas",
+								"{{tienda_id_2}}"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "73"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"49-v/cpCsS/IuHJb9v22y7e8zPAYzs\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:50:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Delete an tienda 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/tiendas/{{tienda_id_1}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"tiendas",
+						"{{tienda_id_1}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete an tienda 1",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_2}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"productos",
+								"00000000-0000-0000-0000-000000000000",
+								"tiendas",
+								"{{tienda_id_2}}"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "73"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"49-v/cpCsS/IuHJb9v22y7e8zPAYzs\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:50:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Delete a producto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/productos/{{producto_id}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"{{producto_id}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete an tienda of an invalid producto",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_2}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"productos",
+								"00000000-0000-0000-0000-000000000000",
+								"tiendas",
+								"{{tienda_id_2}}"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "73"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"49-v/cpCsS/IuHJb9v22y7e8zPAYzs\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:50:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"The producto with the given id was not found\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3050/api/v1",
+			"type": "string"
+		}
+	]
+}
