@@ -6,7 +6,7 @@ import { TiendaDto } from './tienda.dto';
 import { plainToInstance } from 'class-transformer';
 import { TiendaEntity } from './tienda.entity';
 
-@Controller('tiendas')
+@Controller('stores')
 @UseInterceptors(BusinessErrorsInterceptor)
 export class TiendaController {
   constructor(private readonly tiendaService: TiendaService) {}
