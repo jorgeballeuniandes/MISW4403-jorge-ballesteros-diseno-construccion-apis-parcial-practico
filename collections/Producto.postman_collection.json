@@ -94,6 +94,93 @@
 			]
 		},
 		{
+			"name": "Add an invalid producto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							"pm.test(\"Get expected error message\", function () {",
+							"    var data = pm.response.json();",
+							"    pm.expect(data.message).to.eql([\"tipo must be one of the following values: Perecedero, No perecedero\"]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"El producto 1\",\n    \"tipo\": \"Tipo erroneo\",\n    \"precio\": \"2000\"\n }\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/products",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"products"
+					]
+				},
+				"description": "This request creates a new producto. The API returns the created resource with the assigned ID."
+			},
+			"response": [
+				{
+					"name": "Add an invalid producto",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"El producto 1\",\n    \"tipo\": \"Tipo erroneo\",\n    \"precio\": \"2000\"\n }\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n   \"id\": \"48a9ab90-1276-11ed-861d-0242ac120002\",\n   \"nombre\": \"El producto 01\",\n   \"tipo\": \"Perecedero\",\n   \"precio\": \"2000\"\n}\n"
+				}
+			]
+		},
+		{
 			"name": "Get all productos",
 			"event": [
 				{
