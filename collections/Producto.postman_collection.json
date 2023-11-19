@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "a8731c71-0b93-4c8d-b64a-1b2f4f0a11a7",
-		"name": "Productos",
+		"name": "Producto",
 		"description": "Documentation for the API used as an example in the MISW4403 MISO Course.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "30320915",
@@ -44,12 +44,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/productos",
+					"raw": "{{baseUrl}}/products",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos"
+						"products"
 					]
 				},
 				"description": "This request creates a new producto. The API returns the created resource with the assigned ID."
@@ -67,7 +67,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Smithsonian national producto of natural history\",\n    \"description\": \"The world's most popular natural history producto is dedicated to understanding the natural world and our place in it. Delve into the fascinating story of our planet, from its fiery beginnings through billions of years of transformation, and explore life on Earth through exhibitions and activities, collection objects and research that happens in the lab and in the field. The producto is larger than 18 football fields and is home to the largest natural history collection in the world.\",\n    \"address\": \"10th St. & Constitution Ave. NW, Washington, DC\",\n    \"city\": \"Washington DC\",\n    \"image\": \"https://www.si.edu/sites/default/files/newsdesk/fact_sheets/nhb2015-02891.jpg\"\n }\n",
+							"raw": "{\n    \"nombre\": \"El producto 1\",\n    \"tipo\": \"Perecedero\",\n    \"precio\": \"2000\",\n    \"id\": \"c1060dd3-fd5d-4014-960d-49603967e3c1\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -75,16 +75,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3050/api/v1/productos",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/products",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "3050",
 							"path": [
-								"api",
-								"v1",
-								"productos"
+								"products"
 							]
 						}
 					},
@@ -121,12 +117,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/productos",
+					"raw": "{{baseUrl}}/products",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos"
+						"products"
 					]
 				}
 			},
@@ -137,16 +133,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3050/api/v1/productos",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/products",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "3050",
 							"path": [
-								"api",
-								"v1",
-								"productos"
+								"products"
 							]
 						}
 					},
@@ -178,12 +170,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/productos/{{producto_id}}",
+					"raw": "{{baseUrl}}/products/{{producto_id}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos",
+						"products",
 						"{{producto_id}}"
 					]
 				}
@@ -195,16 +187,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3050/api/v1/productos/{{producto_id}}",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/products/{{producto_id}}",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "3050",
 							"path": [
-								"api",
-								"v1",
-								"productos",
+								"products",
 								"{{producto_id}}"
 							]
 						}
@@ -241,12 +229,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000",
+					"raw": "{{baseUrl}}/products/00000000-0000-0000-0000-000000000000",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos",
+						"products",
 						"00000000-0000-0000-0000-000000000000"
 					]
 				}
@@ -258,17 +246,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3050/api/v1/productos/0",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/products/00000000-0000-0000-0000-000000000000",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "3050",
 							"path": [
-								"api",
-								"v1",
-								"productos",
-								"0"
+								"products",
+								"00000000-0000-0000-0000-000000000000"
 							]
 						}
 					},
@@ -309,12 +293,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/productos/{{producto_id}}",
+					"raw": "{{baseUrl}}/products/{{producto_id}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos",
+						"products",
 						"{{producto_id}}"
 					]
 				}
@@ -327,7 +311,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Smithsonian national producto of natural history\",\n    \"description\": \"The world's most popular natural history producto is dedicated to understanding the natural world and our place in it. Delve into the fascinating story of our planet, from its fiery beginnings through billions of years of transformation, and explore life on Earth through exhibitions and activities, collection objects and research that happens in the lab and in the field. The producto is larger than 18 football fields and is home to the largest natural history collection in the world.\",\n    \"address\": \"10th St. & Constitution Ave. NW, Washington, DC (new address)\",\n    \"city\": \"Washington DC\",\n    \"image\": \"https://www.si.edu/sites/default/files/newsdesk/fact_sheets/nhb2015-02891.jpg\"\n}",
+							"raw": "{    \n    \"nombre\": \"El nuevo nombre del producto 1\",\n    \"tipo\": \"No perecedero\",\n    \"precio\": \"3050\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -335,16 +319,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3050/api/v1/productos/{{producto_id}}",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/products/{{producto_id}}",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "3050",
 							"path": [
-								"api",
-								"v1",
-								"productos",
+								"products",
 								"{{producto_id}}"
 							]
 						}
@@ -389,12 +369,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000",
+					"raw": "{{baseUrl}}/products/00000000-0000-0000-0000-000000000000",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos",
+						"products",
 						"00000000-0000-0000-0000-000000000000"
 					]
 				}
@@ -415,13 +395,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/productos/0",
+							"raw": "{{baseUrl}}/products/00000000-0000-0000-0000-000000000000",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"productos",
-								"0"
+								"products",
+								"00000000-0000-0000-0000-000000000000"
 							]
 						}
 					},
@@ -453,12 +433,12 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/productos/{{producto_id}}",
+					"raw": "{{baseUrl}}/products/{{producto_id}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos",
+						"products",
 						"{{producto_id}}"
 					]
 				}
@@ -470,12 +450,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/productos/{{producto_id}}",
+							"raw": "{{baseUrl}}/products/{{producto_id}}",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"productos",
+								"products",
 								"{{producto_id}}"
 							]
 						}
@@ -513,12 +493,12 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000",
+					"raw": "{{baseUrl}}/products/00000000-0000-0000-0000-000000000000",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos",
+						"products",
 						"00000000-0000-0000-0000-000000000000"
 					]
 				}
@@ -530,13 +510,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/productos/0",
+							"raw": "{{baseUrl}}/products/00000000-0000-0000-0000-000000000000",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"productos",
-								"0"
+								"products",
+								"00000000-0000-0000-0000-000000000000"
 							]
 						}
 					},
