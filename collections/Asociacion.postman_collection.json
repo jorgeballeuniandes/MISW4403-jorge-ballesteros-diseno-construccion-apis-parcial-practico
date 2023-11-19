@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "d72f8150-7f11-4769-aab4-046c18416d79",
-		"name": "Productos-Tiendas",
+		"name": "Asociacion",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "30320915",
 		"_collection_link": "https://pf2-g12.postman.co/workspace/pf2~e014f0b5-ee3d-4e14-a3f9-7498abb1de95/collection/30320915-d72f8150-7f11-4769-aab4-046c18416d79?action=share&source=collection_link&creator=30320915"
@@ -35,7 +35,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"nombre\": \"El producto 1\",\n    \"tipo\": \"Perecedero\",\n    \"precio\": \"2000\"\n }",
+					"raw": "{\n    \"nombre\": \"El producto 1\",\n    \"tipo\": \"Perecedero\",\n    \"precio\": \"2000\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -43,12 +43,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/productos",
+					"raw": "{{baseUrl}}/products",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos"
+						"products"
 					]
 				},
 				"description": "This request creates a new producto. The API returns the created resource with the assigned ID."
@@ -66,7 +66,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Smithsonian national producto of natural history\",\n    \"description\": \"The world's most popular natural history producto is dedicated to understanding the natural world and our place in it. Delve into the fascinating story of our planet, from its fiery beginnings through billions of years of transformation, and explore life on Earth through exhibitions and activities, collection objects and research that happens in the lab and in the field. The producto is larger than 18 football fields and is home to the largest natural history collection in the world.\",\n    \"address\": \"10th St. & Constitution Ave. NW, Washington, DC\",\n    \"city\": \"Washington DC\",\n    \"image\": \"https://www.si.edu/sites/default/files/newsdesk/fact_sheets/nhb2015-02891.jpg\"\n }\n",
+							"raw": "{\n    \"nombre\": \"El producto 1\",\n    \"tipo\": \"Perecedero\",\n    \"precio\": \"2000\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -74,12 +74,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/productos",
+							"raw": "{{baseUrl}}/products",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"productos"
+								"products"
 							]
 						}
 					},
@@ -123,12 +123,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/tiendas",
+					"raw": "{{baseUrl}}/stores",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"tiendas"
+						"stores"
 					]
 				}
 			},
@@ -140,7 +140,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"La Femme qui pleure\",\n    \"description\": \"The Weeping Woman, I is an elaboration of one of the central figures in Picasso’s famous mural-size painting Guernica, executed some months earlier.\",\n    \"year\": 1837,\n    \"type\": \"Painting\",\n    \"mainImage\": \"https://assets.catawiki.nl/assets/2019/3/7/2/f/5/2f5c8a17-0b06-4f26-b4a7-4fa51a430ce1.jpg\"\n}",
+							"raw": "{\n    \"nombre\": \"La tienda 01\",\n    \"ciudad\": \"BTA\",\n    \"direccion\": \"Calle 123\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -148,12 +148,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/tiendas",
+							"raw": "{{baseUrl}}/stores",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"tiendas"
+								"stores"
 							]
 						}
 					},
@@ -218,7 +218,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"nombre\": \"La tienda 02\",\n    \"ciudad\": \"BTA\",\n    \"direccion\": \"Calle 123\"\n}",
+					"raw": "{\n    \"nombre\": \"La tienda 02\",\n    \"ciudad\": \"BTA\",\n    \"direccion\": \"Calle 234\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -226,12 +226,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/tiendas",
+					"raw": "{{baseUrl}}/stores",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"tiendas"
+						"stores"
 					]
 				}
 			},
@@ -243,7 +243,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"La Femme qui pleure\",\n    \"description\": \"The Weeping Woman, I is an elaboration of one of the central figures in Picasso’s famous mural-size painting Guernica, executed some months earlier.\",\n    \"year\": 1837,\n    \"type\": \"Painting\",\n    \"mainImage\": \"https://assets.catawiki.nl/assets/2019/3/7/2/f/5/2f5c8a17-0b06-4f26-b4a7-4fa51a430ce1.jpg\"\n}",
+							"raw": "{\n    \"nombre\": \"La tienda 02\",\n    \"ciudad\": \"BTA\",\n    \"direccion\": \"Calle 234\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -251,12 +251,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/tiendas",
+							"raw": "{{baseUrl}}/stores",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"tiendas"
+								"stores"
 							]
 						}
 					},
@@ -294,7 +294,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"nombre\": \"Tienda 01\",\n    \"ciudad\": \"BTA\",\n    \"direccion\": \"Calle 123\",\n    \"id\": \"37d742be-e0e0-4024-b840-64cb41623aed\"\n}"
+					"body": "{\n    \"nombre\": \"La tienda 02\",\n    \"ciudad\": \"BTA\",\n    \"direccion\": \"Calle 234\",\n    \"id\": \"37d742be-e0e0-4024-b840-64cb41623aed\"\n}"
 				}
 			]
 		},
@@ -317,21 +317,21 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/{{tienda_id_1}}",
+					"raw": "{{baseUrl}}/products/{{producto_id}}/stores/{{tienda_id_1}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos",
+						"products",
 						"{{producto_id}}",
-						"tiendas",
+						"stores",
 						"{{tienda_id_1}}"
 					]
 				}
 			},
 			"response": [
 				{
-					"name": "Add an tienda",
+					"name": "Add an tienda to a producto",
 					"originalRequest": {
 						"method": "POST",
 						"header": [],
@@ -345,12 +345,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/tiendas",
+							"raw": "{{baseUrl}}/products/{{producto_id}}/stores/{{tienda_id_1}}",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"tiendas"
+								"products",
+								"{{producto_id}}",
+								"stores",
+								"{{tienda_id_1}}"
 							]
 						}
 					},
@@ -416,14 +419,14 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/00000000-0000-0000-0000-000000000000",
+					"raw": "{{baseUrl}}/products/{{producto_id}}/stores/00000000-0000-0000-0000-000000000000",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos",
+						"products",
 						"{{producto_id}}",
-						"tiendas",
+						"stores",
 						"00000000-0000-0000-0000-000000000000"
 					]
 				}
@@ -435,14 +438,14 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/00000000-0000-0000-0000-000000000000",
+							"raw": "{{baseUrl}}/products/{{producto_id}}/stores/00000000-0000-0000-0000-000000000000",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"productos",
+								"products",
 								"{{producto_id}}",
-								"tiendas",
+								"stores",
 								"00000000-0000-0000-0000-000000000000"
 							]
 						}
@@ -509,14 +512,14 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_1}}",
+					"raw": "{{baseUrl}}/products/00000000-0000-0000-0000-000000000000/stores/{{tienda_id_1}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos",
+						"products",
 						"00000000-0000-0000-0000-000000000000",
-						"tiendas",
+						"stores",
 						"{{tienda_id_1}}"
 					]
 				}
@@ -528,14 +531,14 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_1}}",
+							"raw": "{{baseUrl}}/products/00000000-0000-0000-0000-000000000000/stores/{{tienda_id_1}}",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"productos",
+								"products",
 								"00000000-0000-0000-0000-000000000000",
-								"tiendas",
+								"stores",
 								"{{tienda_id_1}}"
 							]
 						}
@@ -597,14 +600,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/{{tienda_id_1}}",
+					"raw": "{{baseUrl}}/products/{{producto_id}}/stores/{{tienda_id_1}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos",
+						"products",
 						"{{producto_id}}",
-						"tiendas",
+						"stores",
 						"{{tienda_id_1}}"
 					]
 				}
@@ -616,15 +619,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/{{tienda_id}}",
+							"raw": "{{baseUrl}}/products/{{producto_id}}/stores/{{tienda_id_1}}",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"productos",
+								"products",
 								"{{producto_id}}",
-								"tiendas",
-								"{{tienda_id}}"
+								"stores",
+								"{{tienda_id_1}}"
 							]
 						}
 					},
@@ -662,7 +665,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "[\n    {\n        \"id\": \"71d2fcbd-d48c-4a4c-9baa-0c0338d8e22c\",\n        \"nombre\": \"La tienda 01\",\n        \"ciudad\": \"BTA\",\n        \"direccion\": \"Calle 123\"\n    }\n]"
+					"body": "{\n    \"id\": \"1a6088f9-0831-4ef5-87d7-fbb5055797ae\",\n    \"nombre\": \"La tienda 01\",\n    \"ciudad\": \"BTA\",\n    \"direccion\": \"Calle 123\"\n}"
 				}
 			]
 		},
@@ -690,14 +693,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/00000000-0000-0000-0000-000000000000",
+					"raw": "{{baseUrl}}/products/{{producto_id}}/stores/00000000-0000-0000-0000-000000000000",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos",
+						"products",
 						"{{producto_id}}",
-						"tiendas",
+						"stores",
 						"00000000-0000-0000-0000-000000000000"
 					]
 				}
@@ -709,14 +712,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/00000000-0000-0000-0000-000000000000",
+							"raw": "{{baseUrl}}/products/{{producto_id}}/stores/00000000-0000-0000-0000-000000000000",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"productos",
+								"products",
 								"{{producto_id}}",
-								"tiendas",
+								"stores",
 								"00000000-0000-0000-0000-000000000000"
 							]
 						}
@@ -783,14 +786,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_1}}",
+					"raw": "{{baseUrl}}/products/00000000-0000-0000-0000-000000000000/stores/{{tienda_id_1}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos",
+						"products",
 						"00000000-0000-0000-0000-000000000000",
-						"tiendas",
+						"stores",
 						"{{tienda_id_1}}"
 					]
 				}
@@ -802,14 +805,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_1}}",
+							"raw": "{{baseUrl}}/products/00000000-0000-0000-0000-000000000000/stores/{{tienda_id_1}}",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"productos",
+								"products",
 								"00000000-0000-0000-0000-000000000000",
-								"tiendas",
+								"stores",
 								"{{tienda_id_1}}"
 							]
 						}
@@ -876,14 +879,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/{{tienda_id_2}}",
+					"raw": "{{baseUrl}}/products/{{producto_id}}/stores/{{tienda_id_2}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos",
+						"products",
 						"{{producto_id}}",
-						"tiendas",
+						"stores",
 						"{{tienda_id_2}}"
 					]
 				}
@@ -895,15 +898,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_1}}",
+							"raw": "{{baseUrl}}/products/{{producto_id}}/stores/{{tienda_id_2}}",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"productos",
-								"00000000-0000-0000-0000-000000000000",
-								"tiendas",
-								"{{tienda_id_1}}"
+								"products",
+								"{{producto_id}}",
+								"stores",
+								"{{tienda_id_2}}"
 							]
 						}
 					},
@@ -941,12 +944,12 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"statusCode\": 404,\n    \"message\": \"La tienda con el id indicado no está asociada al producto con el id indicado\"\n}"
+					"body": "{\n    \"statusCode\": 412,\n    \"message\": \"La tienda con el id indicado no está asociada al producto con el id indicado\"\n}"
 				}
 			]
 		},
 		{
-			"name": "Get all tienda of a producto",
+			"name": "Get all tiendas of a producto",
 			"event": [
 				{
 					"listen": "test",
@@ -964,33 +967,33 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/",
+					"raw": "{{baseUrl}}/products/{{producto_id}}/stores/",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos",
+						"products",
 						"{{producto_id}}",
-						"tiendas",
+						"stores",
 						""
 					]
 				}
 			},
 			"response": [
 				{
-					"name": "Get all tienda of a producto",
+					"name": "Get all tiendas of a producto",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/",
+							"raw": "{{baseUrl}}/products/{{producto_id}}/stores/",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"productos",
+								"products",
 								"{{producto_id}}",
-								"tiendas",
+								"stores",
 								""
 							]
 						}
@@ -1057,14 +1060,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/",
+					"raw": "{{baseUrl}}/products/00000000-0000-0000-0000-000000000000/stores/",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos",
+						"products",
 						"00000000-0000-0000-0000-000000000000",
-						"tiendas",
+						"stores",
 						""
 					]
 				}
@@ -1076,14 +1079,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/",
+							"raw": "{{baseUrl}}/products/00000000-0000-0000-0000-000000000000/stores/",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"productos",
+								"products",
 								"00000000-0000-0000-0000-000000000000",
-								"tiendas",
+								"stores",
 								""
 							]
 						}
@@ -1154,14 +1157,14 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas",
+					"raw": "{{baseUrl}}/products/{{producto_id}}/stores",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos",
+						"products",
 						"{{producto_id}}",
-						"tiendas"
+						"stores"
 					]
 				}
 			},
@@ -1181,14 +1184,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas",
+							"raw": "{{baseUrl}}/products/{{producto_id}}/stores",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"productos",
+								"products",
 								"{{producto_id}}",
-								"tiendas"
+								"stores"
 							]
 						}
 					},
@@ -1263,14 +1266,14 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas",
+					"raw": "{{baseUrl}}/products/{{producto_id}}/stores",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos",
+						"products",
 						"{{producto_id}}",
-						"tiendas"
+						"stores"
 					]
 				}
 			},
@@ -1282,7 +1285,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"id\": \"{{tienda_id_2}}\"\n    }\n]",
+							"raw": "[\n    {\n        \"id\": \"00000000-0000-0000-0000-000000000000\"\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1290,14 +1293,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas",
+							"raw": "{{baseUrl}}/products/{{producto_id}}/stores",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"productos",
+								"products",
 								"{{producto_id}}",
-								"tiendas"
+								"stores"
 							]
 						}
 					},
@@ -1372,14 +1375,14 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas",
+					"raw": "{{baseUrl}}/products/00000000-0000-0000-0000-000000000000/stores",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos",
+						"products",
 						"00000000-0000-0000-0000-000000000000",
-						"tiendas"
+						"stores"
 					]
 				}
 			},
@@ -1399,14 +1402,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas",
+							"raw": "{{baseUrl}}/products/00000000-0000-0000-0000-000000000000/stores",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"productos",
-								"{{producto_id}}",
-								"tiendas"
+								"products",
+								"00000000-0000-0000-0000-000000000000",
+								"stores"
 							]
 						}
 					},
@@ -1467,14 +1470,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/{{tienda_id_2}}",
+					"raw": "{{baseUrl}}/products/{{producto_id}}/stores/{{tienda_id_2}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos",
+						"products",
 						"{{producto_id}}",
-						"tiendas",
+						"stores",
 						"{{tienda_id_2}}"
 					]
 				}
@@ -1486,14 +1489,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/{{tienda_id_2}}",
+							"raw": "{{baseUrl}}/products/{{producto_id}}/stores/{{tienda_id_2}}",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"productos",
+								"products",
 								"{{producto_id}}",
-								"tiendas",
+								"stores",
 								"{{tienda_id_2}}"
 							]
 						}
@@ -1548,14 +1551,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_2}}",
+					"raw": "{{baseUrl}}/products/00000000-0000-0000-0000-000000000000/stores/{{tienda_id_2}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos",
+						"products",
 						"00000000-0000-0000-0000-000000000000",
-						"tiendas",
+						"stores",
 						"{{tienda_id_2}}"
 					]
 				}
@@ -1567,14 +1570,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_2}}",
+							"raw": "{{baseUrl}}/products/00000000-0000-0000-0000-000000000000/stores/{{tienda_id_2}}",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"productos",
+								"products",
 								"00000000-0000-0000-0000-000000000000",
-								"tiendas",
+								"stores",
 								"{{tienda_id_2}}"
 							]
 						}
@@ -1641,14 +1644,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/00000000-0000-0000-0000-000000000000",
+					"raw": "{{baseUrl}}/products/{{producto_id}}/stores/00000000-0000-0000-0000-000000000000",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos",
+						"products",
 						"{{producto_id}}",
-						"tiendas",
+						"stores",
 						"00000000-0000-0000-0000-000000000000"
 					]
 				}
@@ -1660,15 +1663,15 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_2}}",
+							"raw": "{{baseUrl}}/products/{{producto_id}}/stores/00000000-0000-0000-0000-000000000000",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"productos",
-								"00000000-0000-0000-0000-000000000000",
-								"tiendas",
-								"{{tienda_id_2}}"
+								"products",
+								"{{producto_id}}",
+								"stores",
+								"00000000-0000-0000-0000-000000000000"
 							]
 						}
 					},
@@ -1734,14 +1737,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/productos/{{producto_id}}/tiendas/{{tienda_id_1}}",
+					"raw": "{{baseUrl}}/products/{{producto_id}}/stores/{{tienda_id_1}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos",
+						"products",
 						"{{producto_id}}",
-						"tiendas",
+						"stores",
 						"{{tienda_id_1}}"
 					]
 				}
@@ -1753,15 +1756,15 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_2}}",
+							"raw": "{{baseUrl}}/products/{{producto_id}}/stores/{{tienda_id_1}}",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"productos",
-								"00000000-0000-0000-0000-000000000000",
-								"tiendas",
-								"{{tienda_id_2}}"
+								"products",
+								"{{producto_id}}",
+								"stores",
+								"{{tienda_id_1}}"
 							]
 						}
 					},
@@ -1822,12 +1825,12 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/tiendas/{{tienda_id_2}}",
+					"raw": "{{baseUrl}}/stores/{{tienda_id_2}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"tiendas",
+						"stores",
 						"{{tienda_id_2}}"
 					]
 				}
@@ -1839,14 +1842,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_2}}",
+							"raw": "{{baseUrl}}/stores/{{tienda_id_2}}",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"productos",
-								"00000000-0000-0000-0000-000000000000",
-								"tiendas",
+								"stores",
 								"{{tienda_id_2}}"
 							]
 						}
@@ -1908,12 +1909,12 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/tiendas/{{tienda_id_1}}",
+					"raw": "{{baseUrl}}/stores/{{tienda_id_1}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"tiendas",
+						"stores",
 						"{{tienda_id_1}}"
 					]
 				}
@@ -1925,15 +1926,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_2}}",
+							"raw": "{{baseUrl}}/stores/{{tienda_id_1}}",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"productos",
-								"00000000-0000-0000-0000-000000000000",
-								"tiendas",
-								"{{tienda_id_2}}"
+								"stores",
+								"{{tienda_id_1}}"
 							]
 						}
 					},
@@ -1994,32 +1993,30 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/productos/{{producto_id}}",
+					"raw": "{{baseUrl}}/products/{{producto_id}}",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
-						"productos",
+						"products",
 						"{{producto_id}}"
 					]
 				}
 			},
 			"response": [
 				{
-					"name": "Delete an tienda of an invalid producto",
+					"name": "Delete a producto",
 					"originalRequest": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/productos/00000000-0000-0000-0000-000000000000/tiendas/{{tienda_id_2}}",
+							"raw": "{{baseUrl}}/products/{{producto_id}}",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"productos",
-								"00000000-0000-0000-0000-000000000000",
-								"tiendas",
-								"{{tienda_id_2}}"
+								"products",
+								"{{producto_id}}"
 							]
 						}
 					},
